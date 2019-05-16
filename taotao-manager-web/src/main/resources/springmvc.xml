@@ -30,7 +30,7 @@
 	<mvc:resources location="/js/" mapping="/js/**" />
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="taotao-manager-web" />
-	<dubbo:registry protocol="zookeeper" address="192.168.2.128:2181" />
+	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
 	<dubbo:reference
 		interface="com.wenqiuhan.taotao.service.ItemService" id="itemService" />
 </beans>      
