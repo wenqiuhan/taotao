@@ -55,5 +55,9 @@
 			<artifactId>slf4j-log4j12</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.qcloud</groupId>
+			<artifactId>cos_api</artifactId>
+		</dependency>
 	</dependencies>
 </project>

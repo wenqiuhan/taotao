@@ -11,10 +11,10 @@ import com.github.pagehelper.PageInfo;
 import com.wenqiuhan.taotao.mapper.TbItemMapper;
 import com.wenqiuhan.taotao.pojo.TbItem;
 import com.wenqiuhan.taotao.pojo.TbItemExample;
-import com.wenqiuhan.taotao.pojo.TbItemExample.Criteria;
 
 public class TestPageHelper {
 
+	@SuppressWarnings("resource")
 	@Test
 	public void testPageHelper() throws Exception {
 //		1.在mybatis配置文件中配置分页插件
@@ -26,7 +26,6 @@ public class TestPageHelper {
 		TbItemMapper itemMapper = applicationContext.getBean(TbItemMapper.class);
 //		创建Example对象
 		TbItemExample example = new TbItemExample();
-		Criteria criteria = example.createCriteria();
 		List<TbItem> list = itemMapper.selectByExample(example);
 		PageInfo<TbItem> pageInfo = new PageInfo<>(list);
 		System.out.println("总记录数：" + pageInfo.getTotal());

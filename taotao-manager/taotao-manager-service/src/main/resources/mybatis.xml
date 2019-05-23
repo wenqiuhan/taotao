@@ -6,8 +6,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 配置分页插件 -->
 	<plugins>
 		<plugin interceptor="com.github.pagehelper.PageInterceptor">
-			<!-- 配置数据库类型 -->
-			<property name="dialect" value="mysql"/>
 		</plugin>
 	</plugins>
 </configuration>

@@ -1,12 +1,12 @@
 Date.prototype.format = function(format){ 
     var o =  { 
-    "M+" : this.getMonth()+1, //month 
-    "d+" : this.getDate(), //day 
-    "h+" : this.getHours(), //hour 
-    "m+" : this.getMinutes(), //minute 
-    "s+" : this.getSeconds(), //second 
-    "q+" : Math.floor((this.getMonth()+3)/3), //quarter 
-    "S" : this.getMilliseconds() //millisecond 
+    "M+" : this.getMonth()+1, // month
+    "d+" : this.getDate(), // day
+    "h+" : this.getHours(), // hour
+    "m+" : this.getMinutes(), // minute
+    "s+" : this.getSeconds(), // second
+    "q+" : Math.floor((this.getMonth()+3)/3), // quarter
+    "S" : this.getMilliseconds() // millisecond
     };
     if(/(y+)/.test(format)){ 
     	format = format.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
@@ -22,11 +22,11 @@ Date.prototype.format = function(format){
 var TT = TAOTAO = {
 	// 编辑器参数
 	kingEditorParams : {
-		//指定上传文件参数名称
+		// 指定上传文件参数名称
 		filePostName  : "uploadFile",
-		//指定上传文件请求的url。
+		// 指定上传文件请求的url。
 		uploadJson : '/pic/upload',
-		//上传类型，分别为image、flash、media、file
+		// 上传类型，分别为image、flash、media、file
 		dir : "image"
 	},
 	// 格式化时间
@@ -80,10 +80,10 @@ var TT = TAOTAO = {
         			}
         		}
         	}
-        	//给“上传图片按钮”绑定click事件
+        	// 给“上传图片按钮”绑定click事件
         	$(e).click(function(){
         		var form = $(this).parentsUntil("form").parent("form");
-        		//打开图片上传窗口
+        		// 打开图片上传窗口
         		KindEditor.editor(TT.kingEditorParams).loadPlugin('multiimage',function(){
         			var editor = this;
         			editor.plugin.multiImageDialog({
@@ -151,22 +151,15 @@ var TT = TAOTAO = {
     },
     
     /**
-     * 创建一个窗口，关闭窗口后销毁该窗口对象。<br/>
-     * 
-     * 默认：<br/>
-     * width : 80% <br/>
-     * height : 80% <br/>
-     * title : (空字符串) <br/>
-     * 
-     * 参数：<br/>
-     * width : <br/>
-     * height : <br/>
-     * title : <br/>
-     * url : 必填参数 <br/>
-     * onLoad : function 加载完窗口内容后执行<br/>
-     * 
-     * 
-     */
+	 * 创建一个窗口，关闭窗口后销毁该窗口对象。<br/>
+	 * 
+	 * 默认：<br/> width : 80% <br/> height : 80% <br/> title : (空字符串) <br/>
+	 * 
+	 * 参数：<br/> width : <br/> height : <br/> title : <br/> url : 必填参数 <br/>
+	 * onLoad : function 加载完窗口内容后执行<br/>
+	 * 
+	 * 
+	 */
     createWindow : function(params){
     	$("<div>").css({padding:"5px"}).window({
     		width : params.width?params.width:"80%",
@@ -227,10 +220,8 @@ var TT = TAOTAO = {
     },
     
     /**
-     * 初始化单图片上传组件 <br/>
-     * 选择器为：.onePicUpload <br/>
-     * 上传完成后会设置input内容以及在input后面追加<img> 
-     */
+	 * 初始化单图片上传组件 <br/> 选择器为：.onePicUpload <br/> 上传完成后会设置input内容以及在input后面追加<img>
+	 */
     initOnePicUpload : function(){
     	$(".onePicUpload").click(function(){
 			var _self = $(this);
