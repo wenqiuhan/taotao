@@ -1,94 +1,96 @@
 package com.wenqiuhan.taotao.pojo;
 
-public class TbOrderItem {
-    /**
-     * 商品id
-     */
-    private String itemId;
+import java.io.Serializable;
 
-    /**
-     * 订单id
-     */
-    private String orderId;
+public class TbOrderItem implements Serializable {
+	/**
+	 * 商品id
+	 */
+	private String itemId;
 
-    /**
-     * 商品购买数量
-     */
-    private Integer num;
+	/**
+	 * 订单id
+	 */
+	private String orderId;
 
-    /**
-     * 商品标题
-     */
-    private String title;
+	/**
+	 * 商品购买数量
+	 */
+	private Integer num;
 
-    /**
-     * 商品单价
-     */
-    private Long price;
+	/**
+	 * 商品标题
+	 */
+	private String title;
 
-    /**
-     * 商品总金额
-     */
-    private Long totalFee;
+	/**
+	 * 商品单价
+	 */
+	private Long price;
 
-    /**
-     * 商品图片地址
-     */
-    private String picPath;
+	/**
+	 * 商品总金额
+	 */
+	private Long totalFee;
 
-    public String getItemId() {
-        return itemId;
-    }
+	/**
+	 * 商品图片地址
+	 */
+	private String picPath;
 
-    public void setItemId(String itemId) {
-        this.itemId = itemId == null ? null : itemId.trim();
-    }
+	public String getItemId() {
+		return itemId;
+	}
 
-    public String getOrderId() {
-        return orderId;
-    }
+	public void setItemId(String itemId) {
+		this.itemId = itemId == null ? null : itemId.trim();
+	}
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId == null ? null : orderId.trim();
-    }
+	public String getOrderId() {
+		return orderId;
+	}
 
-    public Integer getNum() {
-        return num;
-    }
+	public void setOrderId(String orderId) {
+		this.orderId = orderId == null ? null : orderId.trim();
+	}
 
-    public void setNum(Integer num) {
-        this.num = num;
-    }
+	public Integer getNum() {
+		return num;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setNum(Integer num) {
+		this.num = num;
+	}
 
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public Long getPrice() {
-        return price;
-    }
+	public void setTitle(String title) {
+		this.title = title == null ? null : title.trim();
+	}
 
-    public void setPrice(Long price) {
-        this.price = price;
-    }
+	public Long getPrice() {
+		return price;
+	}
 
-    public Long getTotalFee() {
-        return totalFee;
-    }
+	public void setPrice(Long price) {
+		this.price = price;
+	}
 
-    public void setTotalFee(Long totalFee) {
-        this.totalFee = totalFee;
-    }
+	public Long getTotalFee() {
+		return totalFee;
+	}
 
-    public String getPicPath() {
-        return picPath;
-    }
+	public void setTotalFee(Long totalFee) {
+		this.totalFee = totalFee;
+	}
 
-    public void setPicPath(String picPath) {
-        this.picPath = picPath == null ? null : picPath.trim();
-    }
+	public String getPicPath() {
+		return picPath;
+	}
+
+	public void setPicPath(String picPath) {
+		this.picPath = picPath == null ? null : picPath.trim();
+	}
 }

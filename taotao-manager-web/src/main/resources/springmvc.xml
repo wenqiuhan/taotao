@@ -16,8 +16,9 @@
 
 
 	<!-- 加载配置文件 -->
-	<context:property-placeholder location="classpath:conf.properties"/>
-	<!-- 配置注解驱动 --> 
+	<context:property-placeholder
+		location="classpath:conf.properties" />
+	<!-- 配置注解驱动 -->
 	<mvc:annotation-driven />
 	<!-- 视图解析器 -->
 	<bean
@@ -33,17 +34,25 @@
 	<mvc:resources location="/js/" mapping="/js/**" />
 	<mvc:resources location="/uploads/" mapping="/uploads/**" />
 	<bean id="multipartResolver"
-        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <!--上传文件的最大大小 -->
-        <property name="maxUploadSize" value="5242880"></property>
-       <!-- 上传文件的编码 --> 
-       <property name="defaultEncoding" value="UTF-8"></property> 
-   </bean>
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!--上传文件的最大大小 -->
+		<property name="maxUploadSize" value="5242880"></property>
+		<!-- 上传文件的编码 -->
+		<property name="defaultEncoding" value="UTF-8"></property>
+	</bean>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="taotao-manager-web" />
-	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" />
+	<dubbo:registry protocol="zookeeper"
+		address="127.0.0.1:2181" />
 	<dubbo:reference
 		interface="com.wenqiuhan.taotao.service.ItemService" id="itemService" />
 	<dubbo:reference
-		interface="com.wenqiuhan.taotao.service.ItemCatService" id="itemCatService" />
+		interface="com.wenqiuhan.taotao.service.ItemCatService"
+		id="itemCatService" />
+	<dubbo:reference
+		interface="com.wenqiuhan.taotao.content.service.ContentCatgeoryService"
+		id="contentCatgeoryService" />
+	<dubbo:reference
+		interface="com.wenqiuhan.taotao.content.service.ContentService"
+		id="contentService" />
 </beans>   
